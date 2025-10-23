@@ -111,4 +111,289 @@
             padding: 0 2rem;
         }
 
-        secti
+        section {
+            padding: 4rem 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #0096ff;
+            text-shadow: 0 0 10px rgba(0, 150, 255, 0.3);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #0096ff;
+            border-left: 1px solid rgba(0, 150, 255, 0.2);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 150, 255, 0.3);
+            border-left: 1px solid rgba(0, 150, 255, 0.5);
+        }
+
+        .service-card h3 {
+            color: #0096ff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #b0b0b0;
+        }
+
+        .service-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff8c42;
+            font-weight: bold;
+        }
+
+        .about {
+            background: #222;
+            border-top: 2px solid #0096ff;
+            border-bottom: 2px solid #0096ff;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #b0b0b0;
+        }
+
+        .contact {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+        }
+
+        .contact h2 {
+            color: #0096ff;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, rgba(0, 150, 255, 0.1) 0%, rgba(0, 150, 255, 0.05) 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(0, 150, 255, 0.3);
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            border-color: rgba(0, 150, 255, 0.6);
+            box-shadow: 0 0 20px rgba(0, 150, 255, 0.2);
+        }
+
+        .contact-card h3 {
+            color: #ff8c42;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .contact-card p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+            color: #b0b0b0;
+        }
+
+        .contact-card a {
+            color: #0096ff;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .contact-card a:hover {
+            border-bottom-color: #0096ff;
+        }
+
+        footer {
+            background: #0d0d0d;
+            color: #808080;
+            text-align: center;
+            padding: 2rem;
+            border-top: 2px solid #0096ff;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(0, 150, 255, 0.1) 0%, rgba(255, 140, 66, 0.1) 100%);
+            padding: 2rem;
+            border-left: 4px solid #ff8c42;
+            border-radius: 5px;
+            margin: 2rem 0;
+            border: 1px solid rgba(0, 150, 255, 0.2);
+        }
+
+        .highlight h3 {
+            color: #0096ff;
+            margin-bottom: 1rem;
+        }
+
+        .highlight p {
+            color: #b0b0b0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Andy's Repair</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Expert Small Engine & Equipment Repair</h1>
+        <p>Serving Stillwater and nearby communities</p>
+        <a href="#contact" class="cta-button">Get Your Equipment Fixed</a>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Repair Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Lawn Equipment</h3>
+                    <ul>
+                        <li>Zero-turn mowers</li>
+                        <li>Walk-behind mowers</li>
+                        <li>Riding mowers</li>
+                        <li>String trimmers</li>
+                        <li>Edgers</li>
+                        <li>Blowers</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Power Equipment</h3>
+                    <ul>
+                        <li>Chainsaws</li>
+                        <li>Pressure washers</li>
+                        <li>Generators</li>
+                        <li>Tillers</li>
+                        <li>Wood chippers</li>
+                        <li>Other small engines</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>Recreational Vehicles</h3>
+                    <ul>
+                        <li>Golf carts</li>
+                        <li>Side by sides (UTVs)</li>
+                        <li>Four wheelers (ATVs)</li>
+                        <li>Maintenance & repair</li>
+                        <li>Tune-ups</li>
+                        <li>Troubleshooting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <h3>Quality Repairs You Can Trust</h3>
+                <p>From routine maintenance to complex repairs, I provide reliable service for all your small engine and equipment needs. Whether it's getting your mower ready for spring or fixing your golf cart, I'm here to help.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Andy's Repair</h2>
+            <div class="about-content">
+                <p><strong style="color: #0096ff;">Hi, I'm Andy Towe</strong>, and I provide professional small engine and equipment repair services in the Stillwater area. With years of experience working on everything from lawn mowers to golf carts, I take pride in delivering quality repairs that get your equipment running like new.</p>
+                <p style="margin-top: 1.5rem;">This is side work done by appointment, which means you get personalized service and flexible scheduling. I'm committed to honest diagnostics, fair pricing, and repairs done right the first time.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3>Andy Towe</h3>
+                    <p>Owner & Technician</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Service Area</h3>
+                    <p>Stillwater and nearby communities</p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">By appointment only</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Contact</h3>
+                    <p><strong>Text for quickest response</strong></p>
+                    <p style="margin-top: 1rem;"><a href="tel:4053553250">(405) 355-3250</a></p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Available to respond anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Andy's Repair. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Professional small engine & equipment repair in Stillwater</p>
+    </footer>
+</body>
+</html>
